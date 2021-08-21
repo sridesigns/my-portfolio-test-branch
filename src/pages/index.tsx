@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import Image from 'next/image'
 import Header from '../components/Header'
 
@@ -12,7 +13,8 @@ export default function Home() {
       </Head>
       <Header />
       <h1>Hello World!</h1>
-
+      <Link href="/apollo-test"><a>GQL Test</a></Link>
+      <Link href="/writing"><a>Writing</a></Link>
 
     </div>
   )

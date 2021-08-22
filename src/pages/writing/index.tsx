@@ -9,13 +9,13 @@ export async function getStaticProps() {
   });
   return {
     props: {
-      blogposts: data.blogPosts
+      blogposts: data.blogPosts,
+      revalidate: 60 * 60,
     },
   };
 }
 
 export default function Writing({ blogposts }) {
-  console.log(blogposts);
   return (
     <>
       <Header />

@@ -8,10 +8,6 @@ query {
     slug
     excerpt
     publishedAt
-    body {
-      json
-      markdown
-    }
     coverImage {
       size
       width

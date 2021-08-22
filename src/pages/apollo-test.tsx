@@ -1,4 +1,4 @@
-import graph from "../graphql/services/graphcms";
+import { graph } from "../graphql/services/graphcms";
 import { GetCaseStudies } from "../graphql/queries/casestudies";
 import Image from "next/image";
 

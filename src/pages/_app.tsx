@@ -1,7 +1,7 @@
 import '../styles/globals.css'
 //import { ApolloProvider } from '@apollo/client';
 //import { useApollo } from '../graphql/services/apollo';
-import React from 'react';
+
 
 
 function MyApp({ Component, pageProps }) {

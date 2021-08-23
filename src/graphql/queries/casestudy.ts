@@ -4,25 +4,22 @@ import { graphQLClient } from '../services/graphcms'
 
 export async function GetCaseStudy(slug) {
   const query = gql`
-  query CaseStudy ($slug: String!){
-    caseStudies (where: { slug: $slug }) {
+  query CaseStudy($slug: String!) {
+    caseStudies(where: {slug: $slug}) {
       id
       title
       slug
-      publishedAt
       summary
+      publishedAt
       bannerImage {
         url
-        size
         width
         height
       }
-      role
-      duration
-      content{
+      content {
         json
         markdown
-      } 
+      }
     }
   }
   `
@@ -36,7 +33,7 @@ export async function GetCaseStudy(slug) {
 export async function GetCaseStudySlug() {
   const query = gql`
 query {
-  blogPosts {
+  caseStudies {
     slug 
   }
 }

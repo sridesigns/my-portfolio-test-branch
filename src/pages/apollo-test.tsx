@@ -21,7 +21,7 @@ export default function ApolloTest({ projects }) {
       <div className="space-y-8">
         {projects?.caseStudies?.map((project) => (
           <div key={project.slug}>
-            <Link href={`/casestudy/${project.slug}`}>
+            <Link href={`/casestudies/${project.slug}`}>
               <a>
                 <h3 className="text-2xl font-bold pb-2">{project.title}</h3>
               </a>

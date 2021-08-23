@@ -5,17 +5,17 @@ import { GetCaseStudy, GetCaseStudySlug } from "../../graphql/queries/casestudy"
 interface Props {
   slug: string
   data: {
-    post: {
+    work: {
       id: string
       title: string
-      excerpt: string
+      summary: string
       publishedAt: string
-      coverImage: {
+      bannerImage: {
         url: string
         width: number
         height: number
       }
-      body: {
+      content: {
         json: string
         markdown: string
       }
@@ -27,13 +27,14 @@ interface Props {
 
 
 export async function getStaticPaths() {
-  const { data } = await GetCaseStudySlug()
+  const slugRes = await GetCaseStudySlug()
+  const slugs = slugRes.caseStudies
 
 
   //if (!data) return { paths: [], fallback: true }
   return {
-    paths: data.caseStudies.map(({ slug }) => ({
-      params: { slug },
+    paths: slugs.map((slug) => ({
+      params: { slug: slug.slug }
     })),
     fallback: false,
   }
@@ -50,7 +51,7 @@ export async function getStaticProps({ params }) {
   };
 };
 
-export default function PostView({ work }) {
+export default function CaseStudyView({ work }) {
   console.log(work);
 
   return (

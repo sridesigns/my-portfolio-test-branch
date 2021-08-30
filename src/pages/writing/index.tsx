@@ -1,9 +1,9 @@
-import { graph } from "../../graphql/services/graphcms";
-import { GetBlogPosts } from "../../graphql/queries/writing/blogposts";
+
+/*import { GetBlogPosts } from "../../graphql/queries/writing/blogposts";
 import Header from "../../components/Header";
 import Link from "next/dist/client/link";
 import { initializeApollo } from '../../graphql/services/apollo';
-import { useQuery } from '@apollo/client';
+
 
 
 {/*export async function getStaticProps() {
@@ -16,11 +16,11 @@ import { useQuery } from '@apollo/client';
       revalidate: 60 * 60,
     },
   };
-}}*/
+}}
 
 
   export default function Writing() {
-    const { data, error, loading } = useQuery(GetBlogPosts)
+
     const blogposts = data.blogPosts
 
     if (loading) return <h1>Loading...</h1>;
@@ -61,4 +61,4 @@ import { useQuery } from '@apollo/client';
 
       }
     };
-  };
+  };*/
